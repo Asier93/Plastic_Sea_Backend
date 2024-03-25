@@ -12,4 +12,5 @@ npm test
 npm install --save-dev supertest
 npm add --D @types/jest  // genera una lista de ayuda
 npm install --save-dev jest-cli
-npm run test:watch   
+npm run test
+ 
