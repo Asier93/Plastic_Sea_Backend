@@ -6,4 +6,4 @@ const objetoSchema = new mongoose.Schema({
   contenido: String
 });
 
-module.exports = mongoose.model('Objeto', objetoSchema);
+module.exports = mongoose.model('Objeto', objetoSchema)

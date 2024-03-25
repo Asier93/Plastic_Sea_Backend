@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors()); // Habilita CORS para todas las rutas
 
+module.exports = app;
 
 
 app.get('/api/data/:objetoId', async (req, res) => {
@@ -25,17 +26,7 @@ app.get('/api/data/:objetoId', async (req, res) => {
   }
 });
 
-app.post('/api/data', async (req, res) => {
-  try {
-    const { objetoId, titulo, contenido } = req.body;
-    const nuevoObjeto = new Objeto({ objetoId, titulo, contenido });
-    await nuevoObjeto.save();
-    res.status(201).send('Objeto creado exitosamente');
-  } catch (error) {
-    console.error('Error al crear objeto en MongoDB:', error);
-    res.status(500).send('Error interno del servidor');
-  }
-});
+
 
 const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
