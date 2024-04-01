@@ -14,7 +14,6 @@ describe("GET /api/data/:objetoId", () => {
       return;
     }
 
-    // Realizar la solicitud GET a la ruta /api/data/:objetoId con el ID del objeto conocido
     const response = await request(app).get(`/api/data/${objetoExistente._id}`);
 
     expect(response.status).toBe(200);
