@@ -14,3 +14,6 @@ npm add --D @types/jest  // genera una lista de ayuda
 npm install --save-dev jest-cli
 npm run test
  
+
+.ENV
+npm install dotenv
